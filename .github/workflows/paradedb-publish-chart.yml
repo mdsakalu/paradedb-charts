@@ -1,7 +1,6 @@
 name: Release Charts
 
 on:
-  workflow_dispatch:
   push:
     branches:
       - dev
@@ -33,4 +32,3 @@ jobs:
         uses: helm/chart-releaser-action@v1.6.0
         env:
           CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
-          
